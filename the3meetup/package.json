@@ -1,0 +1,49 @@
+{
+  "name": "the3meetup",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "next lint",
+    "websocket": "node websocket-server.js",
+    "websocket:pm2": "pm2 start ecosystem.config.js --only websocket-server",
+    "websocket:pm2:stop": "pm2 stop websocket-server",
+    "websocket:pm2:restart": "pm2 restart websocket-server",
+    "websocket:pm2:logs": "pm2 logs websocket-server",
+    "websocket:pm2:delete": "pm2 delete websocket-server",
+    "dev:all": "node start-servers.js",
+    "prod:all": "node start-production.js"
+  },
+  "dependencies": {
+    "@types/multer": "^1.4.12",
+    "@types/ws": "^8.5.13",
+    "ali-oss": "^6.23.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^5.2.1",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.9.2",
+    "next": "15.3.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-easy-crop": "^5.4.2",
+    "sharp": "^0.33.5",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^5.1.2",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.4",
+    "react-router-dom": "^7.10.1",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vite": "^7.2.7"
+  }
+}
