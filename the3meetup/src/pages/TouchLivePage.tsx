@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import ImageCropModal from '../components/ImageCropModal';
 import { getImageUrl } from '../lib/imageUrl';
+import { publicUrl } from '../lib/publicUrl';
 
 interface UploadData {
   id: number;
@@ -295,7 +296,7 @@ export default function TouchLivePage() {
     <div className="min-h-screen flex flex-col bg-[#DCFF92]">
       <div className="w-full flex items-center px-4 py-3 border-b bg-[#DCFF92]">
         <div className="w-12 h-12 rounded-full flex items-center justify-center mr-2">
-          <img src="/icons/logo.png" alt="logo" className="w-12 h-12 rounded-full" />
+          <img src={publicUrl('icons/logo.png')} alt="logo" className="w-12 h-12 rounded-full" />
         </div>
       </div>
       <div className="flex-1 overflow-y-auto px-0 py-2" style={{ maxHeight: '70vh' }}>
@@ -340,7 +341,7 @@ export default function TouchLivePage() {
               onClick={() => setCropModalOpen(true)}
               title="选择图片" 
             >
-              <img src="/icons/uploadImage.svg" alt="选择图片" className="w-7 h-7" />
+              <img src={publicUrl('icons/uploadImage.svg')} alt="选择图片" className="w-7 h-7" />
             </button>
           </div>
           <button
@@ -363,7 +364,7 @@ export default function TouchLivePage() {
                 : '发送'
             }
           >
-            <img src="/icons/send.svg" alt="发送" className="w-7 h-7" />
+            <img src={publicUrl('icons/send.svg')} alt="发送" className="w-7 h-7" />
           </button>
         </div>
       </div>

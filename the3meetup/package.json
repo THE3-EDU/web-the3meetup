@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:gh": "vite build && node -e \"require('fs').copyFileSync('dist/index.html','dist/404.html')\"",
     "preview": "vite preview",
+    "deploy:gh": "npm run build:gh && npx gh-pages -d dist",
     "lint": "next lint",
     "websocket": "node websocket-server.js",
     "websocket:pm2": "pm2 start ecosystem.config.js --only websocket-server",
@@ -33,6 +35,7 @@
     "ws": "^8.18.0"
   },
   "devDependencies": {
+    "gh-pages": "^6.2.0",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",

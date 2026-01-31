@@ -30,6 +30,7 @@ export default defineConfig({
       },
     },
   },
-  base: '/',
+  // GitHub Pages 项目页需设为 '/仓库名/'，例如 '/the3meetup/'；根域名可保持 '/'
+  base: process.env.VITE_BASE_URL || '/',
 });
 

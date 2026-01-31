@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { publicUrl } from '../lib/publicUrl';
 
 export default function LoadingPage() {
   const [progress, setProgress] = useState(0);
@@ -30,7 +31,7 @@ export default function LoadingPage() {
       <div className="flex-1 flex items-center justify-center">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/icons/loading_logo1.png" 
+          src={publicUrl('icons/loading_logo1.png')} 
           alt="Loading" 
           className="animate-pulse w-20"
           style={{ height: 'auto' }}
@@ -49,7 +50,7 @@ export default function LoadingPage() {
       <div className="mb-8">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img 
-          src="/icons/loading_logo.png" 
+          src={publicUrl('icons/loading_logo.png')} 
           alt="Logo" 
           className="w-16 h-auto"
         />
