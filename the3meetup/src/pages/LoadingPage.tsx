@@ -13,7 +13,7 @@ export default function LoadingPage() {
           clearInterval(interval);
           // 加载完成后跳转到主页面
           setTimeout(() => {
-            navigate('/touchlive');
+            navigate('/touchliveshow');
           }, 500);
           return 100;
         }
