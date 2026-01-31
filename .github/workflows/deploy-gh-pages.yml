@@ -30,7 +30,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: the3meetup
-        run: npm ci
+        run: npm install
 
       # 项目页地址为 https://<user>.github.io/<repo>/，base 必须为 /<repo>/
       - name: Build
