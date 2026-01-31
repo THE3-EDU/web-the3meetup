@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import TouchLivePage from './pages/TouchLivePage';
+import TouchLiveShowPage from './pages/TouchLiveShowPage';
 import LoadingPage from './pages/LoadingPage';
 import AdminPage from './pages/AdminPage';
 import ReviewPage from './pages/ReviewPage';
@@ -12,6 +13,7 @@ function App() {
       <Route path="/touchlive" element={<TouchLivePage />} />
       <Route path="/admin" element={<AdminPage />} />
       <Route path="/review" element={<ReviewPage />} />
+      <Route path="/touchliveshow" element={<TouchLiveShowPage />} />
     </Routes>
   );
 }
